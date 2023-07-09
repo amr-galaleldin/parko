@@ -2,4 +2,3 @@ gunicorn
 opencv-python
 flask
 numpy
-imutils
