@@ -26,7 +26,7 @@ def predict():
         posList = pickle.load(f)
 
     for i in range(1):
-            img = cap.read()
+            _,img = cap.read()
            
             gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
             blur = cv2.GaussianBlur(gray, (3, 3), 1)
