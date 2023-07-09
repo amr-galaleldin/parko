@@ -29,9 +29,9 @@ def predict():
     for i in range(1):
             img = cap.read()
            
-            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-            blur = cv2.GaussianBlur(gray, (3, 3), 1)
-            Thre = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 25, 16)
+            # gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            # blur = cv2.GaussianBlur(gray, (3, 3), 1)
+            # Thre = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 25, 16)
             # blur = cv2.medianBlur(Thre, 5)
             # kernel = np.ones((3, 3), np.uint8)
             # dilate = cv2.dilate(blur, kernel, iterations=1)
