@@ -22,9 +22,9 @@ def check(imgPro, posList):
 def predict():
     # cap = cv2.VideoCapture('rtsp://admin:LJJRLI@193.227.12.175')
     cap = imutils.video.VideoStream('rtsp://admin:LJJRLI@193.227.12.175').start()
-    # posList = 0
-    # with open('carParkPos.pkl', 'rb') as f:
-    #     posList = pickle.load(f)
+    posList = 0
+    with open('carParkPos.pkl', 'rb') as f:
+        posList = pickle.load(f)
 
     for i in range(1):
             img = cap.read()
@@ -35,8 +35,8 @@ def predict():
             blur = cv2.medianBlur(Thre, 5)
             kernel = np.ones((3, 3), np.uint8)
             dilate = cv2.dilate(blur, kernel, iterations=1)
-            # predictt = check(imgPro=dilate, posList=posList)
-    return "dcfvgbhnjm"
+            predictt = check(imgPro=dilate, posList=posList)
+    return jsonify(predictt)
 
 
 
