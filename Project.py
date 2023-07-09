@@ -22,20 +22,20 @@ def check(imgPro, posList):
 def predict():
     # cap = cv2.VideoCapture('rtsp://admin:LJJRLI@193.227.12.175')
     cap = imutils.video.VideoStream('rtsp://admin:LJJRLI@193.227.12.175').start()
-    posList = 0
-    with open('carParkPos.pkl', 'rb') as f:
-        posList = pickle.load(f)
+    # posList = 0
+    # with open('carParkPos.pkl', 'rb') as f:
+    #     posList = pickle.load(f)
 
     for i in range(1):
             img = cap.read()
            
-            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-            blur = cv2.GaussianBlur(gray, (3, 3), 1)
-            Thre = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 25, 16)
-            blur = cv2.medianBlur(Thre, 5)
-            kernel = np.ones((3, 3), np.uint8)
-            dilate = cv2.dilate(blur, kernel, iterations=1)
-            predictt = check(imgPro=dilate, posList=posList)
+            # gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            # blur = cv2.GaussianBlur(gray, (3, 3), 1)
+            # Thre = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 25, 16)
+            # blur = cv2.medianBlur(Thre, 5)
+            # kernel = np.ones((3, 3), np.uint8)
+            # dilate = cv2.dilate(blur, kernel, iterations=1)
+            # predictt = check(imgPro=dilate, posList=posList)
     return "dcfvgbhnjm"
 
 
