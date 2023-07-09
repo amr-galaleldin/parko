@@ -19,8 +19,8 @@ def check(imgPro, posList):
     return {'capacity': len(posList), 'freespaces': spaceCount}
 
 def predict():
-    # cap = cv2.VideoCapture('rtsp://admin:LJJRLI@193.227.12.175')
-    cap = imutils.video.VideoStream('rtsp://admin:LJJRLI@193.227.12.175').start()
+    cap = cv2.VideoCapture('rtsp://admin:LJJRLI@193.227.12.175')
+    # cap = imutils.video.VideoStream('rtsp://admin:LJJRLI@193.227.12.175').start()
     posList = 0
     with open('CarParkPos.pkl', 'rb') as f:
         posList = pickle.load(f)
