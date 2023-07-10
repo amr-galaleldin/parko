@@ -2,6 +2,3 @@ gunicorn
 opencv-python
 flask
 numpy
-gevent
-gevent-websocket
-flask_socketio
